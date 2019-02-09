@@ -1,0 +1,10 @@
+{
+  "testEnvironment": "node",
+  "collectCoverage": true,
+  "coverageDirectory": "coverage",
+  "testMatch": [
+    "**/tests/**/*Test.js?(x)",
+    "**/?(*.)(spec|test).js?(x)"
+  ],
+  "testPathIgnorePatterns": ["/node_modules/", "tests/volatile"]
+}

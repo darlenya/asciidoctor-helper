@@ -1,0 +1,61 @@
+{
+  "name": "asciidoctor-helper",
+  "version": "0.0.0-semantic-release",
+  "publishConfig": {
+    "access": "public"
+  },
+  "main": "lib/index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/asciidoctor-helper.git"
+  },
+  "bugs": {
+    "url": "https://github.com/asciidoctor-helper/issues"
+  },
+  "homepage": "https://github.com/asciidoctor-helper#readme",
+  "scripts": {
+    "build": "npm run src_format && npm run src_lint && babel src -d lib",
+    "src_lint": "eslint src tests",
+    "src_format": "prettier --no-semi --single-quote --trailing-comma es5 --write \"{src,tests}/**/*.js\"",
+    "test_only": "jest",
+    "test": "npm run build && jest -c jest.config.json",
+    "debug": "npm run build && node --inspect-brk ./node_modules/.bin/jest -i --config=./jest.config.json",
+    "prepare": "npm run build"
+  },
+  "contributors": [
+    {
+      "name": "Torsten Link",
+      "email": "torstenlink@gmx.de"
+    }
+  ],
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/cli": "7.2.3",
+    "@babel/core": "7.2.2",
+    "@babel/node": "7.2.2",
+    "@babel/plugin-proposal-object-rest-spread": "7.3.1",
+    "@babel/plugin-transform-runtime": "7.2.0",
+    "@babel/polyfill": "7.2.5",
+    "@babel/preset-env": "7.3.1",
+    "@babel/register": "7.0.0",
+    "babel-core": "7.0.0-bridge.0",
+    "babel-eslint": "10.0.1",
+    "babel-jest": "24.0.0",
+    "cz-conventional-changelog": "2.1.0",
+    "eslint": "5.13.0",
+    "eslint-config-prettier": "4.0.0",
+    "eslint-plugin-babel": "5.3.0",
+    "jest": "24.0.0",
+    "jest-cli": "24.0.0",
+    "jest-environment-node-debug": "2.0.0",
+    "mkdirp": "^0.5.1",
+    "prettier": "1.16.3",
+    "regenerator-runtime": "0.13.1",
+    "rimraf": "^2.6.3",
+    "semantic-release": "15.13.3"
+  },
+  "dependencies": {
+    "@babel/runtime": "7.3.1",
+    "globby": "^9.0.0"
+  }
+}

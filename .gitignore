@@ -1,0 +1,12 @@
+lib
+node_modules
+coverage
+jsdoc
+npm-debug.log
+result
+readme.xml
+tests/volatile
+yarn-error.log
+yarn.lock
+package-lock.json
+volatile
