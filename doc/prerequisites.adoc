@@ -1,0 +1,11 @@
+=== asciidoctor
+
+----
+$ sudo gem install asciidoctor
+----
+
+=== asciidoctor-diagram
+
+----
+$ sudo gem install asciidoctor-diagram
+----
